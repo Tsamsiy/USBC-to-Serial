@@ -1,0 +1,35 @@
+CAM-Ausgabe für AktuellesProjekt 1.0.1_USBCToSerial.T3001
+Ausgabe am 21. Mrz 2021, 14:20h
+AktuellesProjekt erzeugt mit TARGET 18.9.0.51 design station
+Ausgabe erzeugt mit TARGET 3001! V18.9.0.51
+AktuellesProjekt von TARGET NC-Version: Kommerzielle Nutzung ist strafbar!
+LIEFERANSCHRIFT:
+  
+  
+  
+  D- 
+  Tel: 
+  FAX: 
+  eMail: 
+Größe der Platine: 38,735 mm x 15,24 mm
+
+Folgend die Beschreibung der erzeugten Dateien:
+
+1.0.1_USBCToSerial.Top = 16 = Kupfer oben L1   ( *.Top )
+1.0.1_USBCToSerial.Bot = 2 = Kupfer unten L2   ( *.Bot )
+1.0.1_USBCToSerial.Tool = Bohrerliste
+1.0.1_USBCToSerial.Drill = Durchkontaktierte Bohrungen
+1.0.1_USBCToSerial.Outline = 23 = Platinen-Umriss   ( *.Outline )
+1.0.1_USBCToSerial.StopTop = 18 = Lötstoppmaske oben   ( *.StopTop )
+1.0.1_USBCToSerial.StopBot = 4 = Lötstoppmaske unten   ( *.StopBot )
+1.0.1_USBCToSerial.PosiTop = 21 = Bestückungsdruck oben   ( *.PosiTop )
+1.0.1_USBCToSerial.PosiBot = 7 = Bestückungsdruck unten   ( *.PosiBot )
+1.0.1_USBCToSerial.PasteTop = 19 = Lötpaste oben   ( *.PasteTop )
+1.0.1_USBCToSerial.PasteBot = 5 = Lötpaste unten   ( *.PasteBot )
+1.0.1_USBCToSerial.Apr = TARGET 3001! Blendenliste
+1.0.1_USBCToSerial.Whl = Eagle kompatible Blendenliste
+
+
+Achtung Langlöcher! Bohrdatei enthält 4 Langlöcher!
+
+Achtung: Dünnste Schrift ist kleiner 0,150mm: (0,104 bei -1,3165 | -0,1415) auf Ebene 21
