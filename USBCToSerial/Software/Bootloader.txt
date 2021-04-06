@@ -1,0 +1,156 @@
+Instructions for flashing bootloader to ATTiny841 after assembly
+##################################################################
+
+ATTinyCore[Spence Konde] Settings:
+------------------------------------
+Board:		ATTiny441/841 (Optiboot)
+Chip:		841
+Clock:		8MHz internal (Vcc < 4,5V)
+BOD Level:	2,7V
+BOD active:	disabled
+BOD sleep:	disabled
+Pin Mapping:	clockwise
+LTO:		enabled
+Bootloader:	UART0
+Wire Modes:	Master only
+tinyNeoPixel:	Port A
+millis():	enabled
+
+
+
+Connections:
+-----------------------------------
+Arduino as ISP		USBC-to-Serial (test points)
+	D10		RST
+	D11		MOSI
+	D12		MISO
+	D13		CLK
+
+Connect the programmer's GND to GND on the Serial headder of the board
+and connect a USB typeC (power)cable to the board
+
+select "burn bootloader" in the tools menu of the Arduino IDE
+
+When successful, the indicator LED "20" on the board will start to flash.
+
+
+Sample console dump during burning
+-------------------------------------
+avrdude: Version 6.3-20190619
+         Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
+         Copyright (c) 2007-2014 Joerg Wunsch
+
+         System wide configuration file is "C:\Users\Tsamsiyu\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.4.1/avrdude.conf"
+
+         Using Port                    : COM3
+         Using Programmer              : stk500v1
+         Overriding Baud Rate          : 19200
+         Setting bit clk period        : 5.0
+         AVR Part                      : ATtiny841
+         Chip Erase delay              : 15000 us
+         PAGEL                         : P00
+         BS2                           : P00
+         RESET disposition             : possible i/o
+         RETRY pulse                   : SCK
+         serial program mode           : yes
+         parallel program mode         : yes
+         Timeout                       : 200
+         StabDelay                     : 100
+         CmdexeDelay                   : 25
+         SyncLoops                     : 32
+         ByteDelay                     : 0
+         PollIndex                     : 3
+         PollValue                     : 0x53
+         Memory Detail                 :
+
+                                  Block Poll               Page                       Polled
+           Memory Type Mode Delay Size  Indx Paged  Size   Size #Pages MinW  MaxW   ReadBack
+           ----------- ---- ----- ----- ---- ------ ------ ---- ------ ----- ----- ---------
+           eeprom        65     6     4    0 no        512    4      0  4000  4500 0xff 0xff
+           flash         65    12    32    0 yes      8192   16    512  4500  4500 0xff 0xff
+           signature      0     0     0    0 no          3    0      0     0     0 0x00 0x00
+           lock           0     0     0    0 no          1    0      0  9000  9000 0x00 0x00
+           lfuse          0     0     0    0 no          1    0      0  9000  9000 0x00 0x00
+           hfuse          0     0     0    0 no          1    0      0  9000  9000 0x00 0x00
+           efuse          0     0     0    0 no          1    0      0  9000  9000 0x00 0x00
+           calibration    0     0     0    0 no          1    0      0     0     0 0x00 0x00
+
+         Programmer Type : STK500
+         Description     : Atmel STK500 Version 1.x firmware
+         Hardware Version: 2
+         Firmware Version: 1.18
+         Topcard         : Unknown
+         Vtarget         : 0.0 V
+         Varef           : 0.0 V
+         Oscillator      : Off
+         SCK period      : 0.1 us
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.04s
+
+avrdude: Device signature = 0x1e9315 (probably t841)
+avrdude: erasing chip
+avrdude: reading input file "0b11111110"
+avrdude: writing efuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of efuse written
+avrdude: verifying efuse memory against 0b11111110:
+avrdude: load data efuse data from input file 0b11111110:
+avrdude: input file 0b11111110 contains 1 bytes
+avrdude: reading on-chip efuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of efuse verified
+avrdude: reading input file "0b11011101"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0b11011101:
+avrdude: load data hfuse data from input file 0b11011101:
+avrdude: input file 0b11011101 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xE2"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.05s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xE2:
+avrdude: load data lfuse data from input file 0xE2:
+avrdude: input file 0xE2 contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "C:\Users\Tsamsiyu\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.4.1/bootloaders/optiboot/optiboot_attiny841_8000000L_int.hex"
+avrdude: writing flash (8192 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 8192 bytes of flash written
+avrdude: verifying flash memory against C:\Users\Tsamsiyu\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.4.1/bootloaders/optiboot/optiboot_attiny841_8000000L_int.hex:
+avrdude: load data flash data from input file C:\Users\Tsamsiyu\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.4.1/bootloaders/optiboot/optiboot_attiny841_8000000L_int.hex:
+avrdude: input file C:\Users\Tsamsiyu\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.4.1/bootloaders/optiboot/optiboot_attiny841_8000000L_int.hex contains 8192 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 8192 bytes of flash verified
+
+avrdude done.  Thank you.
+
