@@ -22,9 +22,15 @@ This direct connection is also used to change the MCU's firmware without needing
 - PCB layout completed
 - PCBs ordered
 - parsing algorithm functional
+- PCB assembly completed
+- USB-UART sub-module tested
+- MCU sub-module tested
+- PD sub-module tested
 
 # To do
-- assemble PCB
 - reduce size of pasring algorithm
 - implement menu button functionality
 - stresstest PD
+- [next version] add connection between data pairs 1 and 2 on the USB socket
+- [next version] correct wrong polarity of TXT and RXT LEDs in schematic
+- configure CP2102N with Sillabs Software to use GPIOs as TXT and RXT
