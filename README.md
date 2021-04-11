@@ -17,6 +17,12 @@ The MCU is also interfaced with the modules own UART interface. This allows the 
 When the module is not in "AT mode", the MCU's UART port is disabled.
 This direct connection is also used to change the MCU's firmware without needing an external adapter.
 
+# Hardware V1.0.1
+![IMG_20210406_214657](https://user-images.githubusercontent.com/49845327/114308589-cdbf0100-9ae4-11eb-855c-54cde379152d.jpg)
+![IMG_20210406_214722](https://user-images.githubusercontent.com/49845327/114308629-e202fe00-9ae4-11eb-9fad-4c9d3fbb45a6.jpg)
+note: an error occured while uploading gerbers to the PCB manufacturer's website.
+This specific PCB had to be manually altered to make it work
+
 # Current status
 - schematics completed
 - PCB layout completed
