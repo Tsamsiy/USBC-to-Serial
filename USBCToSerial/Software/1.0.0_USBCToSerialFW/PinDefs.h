@@ -14,13 +14,13 @@
   */
 
   //PD controller
-  #define PDRST PA7
-  #define PDIRQ PB1
+  #define PDRST 7//PA7
+  #define PDIRQ 9//PB1
   //#define PDO2
   //#define PDO3
-  #define PDV0 PB0    //9V, 12V
-  #define PDV1 PB2    //15V, 20V
+  #define PDV0 10//PB0    //9V, 12V
+  #define PDV1 8//PB2    //15V, 20V
 
-  #define StatLED PA0
-  #define ModeSW PA3
+  #define StatLED 0//PA0
+  #define ModeSW 3//PA3
 #endif
