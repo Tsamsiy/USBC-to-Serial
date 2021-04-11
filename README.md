@@ -26,6 +26,7 @@ This direct connection is also used to change the MCU's firmware without needing
 - USB-UART sub-module tested
 - MCU sub-module tested
 - PD sub-module tested
+- mode button firmware fuctional (no AT mode)
 
 # To do
 - reduce size of pasring algorithm
